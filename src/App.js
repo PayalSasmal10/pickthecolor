@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import { SketchPicker } from 'react-color';
