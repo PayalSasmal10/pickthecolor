@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { ColorPicker, useColor } from 'react-color-palette';
+import "react-color-palette/lib/css/styles.css";
+import { SketchPicker } from 'react-color';
 
 function App() {
+  const [color, setColor] = useColor("lightblue");
+  console.log(color);
+  console.log(setColor);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Color Picker</h1>
+      <SketchPicker
+        color={color}
+        onChange={setColor}
+       />
     </div>
   );
 }
